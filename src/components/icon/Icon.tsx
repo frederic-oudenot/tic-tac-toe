@@ -12,6 +12,8 @@ export default function Icon({isRound,width, height}:IconProp){
   const iconStyle = {
     width:`${width}%`,
     height:`${height}%`,
+    justifyContent:"center",
+    paddingTop:"1rem"
   }
   return (
     <img src={isRound ? iconO : iconX} style={iconStyle}></img>

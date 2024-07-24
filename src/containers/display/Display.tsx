@@ -7,10 +7,12 @@ interface DisplayProp {
 
 export default function Display({isRound}:DisplayProp){
     
-  return <article style={displayStyle}>
-    <Icon isRound={isRound} width={"30"} height={"30"}/>
-    <Description data={"Turn"}/>
-  </article>
+  return(
+    <article style={displayStyle}>
+      <Icon isRound={isRound} width={"30"} height={"30"}/>
+      <Description data={"TURN"}/>
+    </article>
+  )
 }
 
 const displayStyle = {
@@ -18,7 +20,7 @@ const displayStyle = {
   justifyContent:"center",
   alignItems:"center",
   color:"black",
-  width:"300px",
+  width:"250px",
   borderRadius:"1rem",
   backgroundColor:"white"
 }
