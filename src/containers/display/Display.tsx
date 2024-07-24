@@ -9,7 +9,7 @@ export default function Display({isRound}:DisplayProp){
     
   return <article style={displayStyle}>
     <Icon isRound={isRound} width={"30"} height={"30"}/>
-    <Description/>
+    <Description data={"Turn"}/>
   </article>
 }
 

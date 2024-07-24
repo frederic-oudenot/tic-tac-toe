@@ -1,5 +1,6 @@
-import iconX from '/assets/icons/x.svg'
-import iconO from '/assets/icons/o.svg'
+/* eslint-disable import/no-unresolved */
+import iconX from "/assets/icons/x.svg"
+import iconO from "/assets/icons/o.svg"
 
 interface IconProp {
     isRound:true|false,
@@ -8,11 +9,11 @@ interface IconProp {
 }
 
 export default function Icon({isRound,width, height}:IconProp){
-    const iconStyle = {
-        width:`${width}%`,
-        height:`${height}%`,
-    }
-    return (
-        <img src={isRound ? iconO : iconX} style={iconStyle}></img>
-    );
+  const iconStyle = {
+    width:`${width}%`,
+    height:`${height}%`,
+  }
+  return (
+    <img src={isRound ? iconO : iconX} style={iconStyle}></img>
+  );
 }
