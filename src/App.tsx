@@ -1,11 +1,13 @@
 import { useState } from "react"
 import "./App.css"
+import Display from "./containers/display/Display"
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <Display isRound={false}/>
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
