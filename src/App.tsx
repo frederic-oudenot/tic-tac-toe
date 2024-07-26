@@ -1,25 +1,20 @@
 import { useState } from "react"
 import "./App.css"
 import Display from "./containers/display/Display"
+import Grid from "./containers/grid/Grid"
+import Icon from "./components/icon/Icon"
+import Title from "./components/text/Title"
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isRound, setIsRound] = useState(true)
+  const [isCross, setIsCross] = useState(false)
+
+
 
   return (
     <>
-      <Display isRound={false}/>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Display isRound={isRound} isCross={isCross}/>
+      <Grid setIsCross={setIsCross} setIsRound={setIsRound} isRound={isRound} isCross={isCross}/>
     </>
   )
 }

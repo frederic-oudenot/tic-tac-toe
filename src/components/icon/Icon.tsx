@@ -3,12 +3,13 @@ import iconX from "/assets/icons/x.svg"
 import iconO from "/assets/icons/o.svg"
 
 interface IconProp {
-    isRound:true|false,
-    width:string,
-    height:string,
+    isRound:boolean;
+    isCross:boolean;
+    width:string;
+    height:string;
 }
 
-export default function Icon({isRound,width, height}:IconProp){
+export default function Icon({isRound, isCross, width, height}:IconProp){
   const iconStyle = {
     width:`${width}%`,
     height:`${height}%`,
@@ -16,6 +17,9 @@ export default function Icon({isRound,width, height}:IconProp){
     paddingTop:"1rem"
   }
   return (
-    <img src={isRound ? iconO : iconX} style={iconStyle}></img>
+    <>
+      {isCross ? <img src={iconX} style={iconStyle}></img> :""}
+      {isRound ? <img src={iconO} style={iconStyle}></img> :""}
+    </>
   );
 }

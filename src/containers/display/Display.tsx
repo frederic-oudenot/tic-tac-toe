@@ -2,14 +2,15 @@ import Icon from "../../components/icon/Icon";
 import Description from "../../components/text/Description";
 
 interface DisplayProp {
-    isRound : boolean;
+    isRound: boolean;
+    isCross: boolean;
 }
 
-export default function Display({isRound}:DisplayProp){
+export default function Display({isRound,isCross}:DisplayProp){
     
   return(
     <article style={displayStyle}>
-      <Icon isRound={isRound} width={"30"} height={"30"}/>
+      <Icon isRound={isRound}  isCross={isCross} width={"30"} height={"30"}/>
       <Description data={"TURN"}/>
     </article>
   )
@@ -24,3 +25,4 @@ const displayStyle = {
   borderRadius:"1rem",
   backgroundColor:"white"
 }
+
