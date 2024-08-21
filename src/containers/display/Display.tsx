@@ -10,7 +10,7 @@ export default function Display({isRound,isCross}:DisplayProp){
     
   return(
     <article style={displayStyle}>
-      <Icon isRound={isRound}  isCross={isCross} width={"30"} height={"30"}/>
+      <Icon isRound={isRound}  isCross={isCross} width={"70"} height={"70"}/>
       <Description data={"TURN"}/>
     </article>
   )
@@ -21,8 +21,10 @@ const displayStyle = {
   justifyContent:"center",
   alignItems:"center",
   color:"black",
-  width:"250px",
+  width:"200px",
+  height:"80px",
   borderRadius:"1rem",
   backgroundColor:"white"
 }
+
 

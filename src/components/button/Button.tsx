@@ -1,12 +1,12 @@
 interface ButtonProp {
   handleClick: () => void;
+  color: "blue" | "yellow" | "grey";
 }
-export default function Button({ handleClick }: ButtonProp) {
-    
+export default function Button({ handleClick, color }: ButtonProp) {
   return (
-    <button style={{display:"flex", color:"red"}} onClick={handleClick}>
-    </button>
+    <button
+      style={{ display: "flex", backgroundColor: `${color}` }}
+      onClick={handleClick}
+    ></button>
   );
 }
-
-

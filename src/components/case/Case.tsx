@@ -5,7 +5,7 @@ interface CaseProp {
 
 export default function Case({id, handleClick}:CaseProp){
   return (
-    <div id={`case-${id}`} style={caseStyle} onClick={handleClick}>
+    <div className={`case-${id}-style`} id={`case-${id}`} style={caseStyle} onClick={handleClick}>
     </div>
   )
   
@@ -14,4 +14,9 @@ export default function Case({id, handleClick}:CaseProp){
 const caseStyle ={
   width:"150px",
   height:"150px",
+  display: "flex",
+  alignItems:"center",
+  justifyContent:"center",
+  margin:"0 auto",
+  paddingTop:"1rem",
 }
