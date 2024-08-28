@@ -26,19 +26,16 @@ const GameContext = createContext<GameContextType>(undefined);
 function reducer(state :StateType, action:ActionType) {
   switch (action.type) {
   case "resetGame":
-    return {...state,
-      resetGame : action.payload,
-      endingGame: false }
+    return { ...state, resetGame: action.payload }
 
   case "endingGame":
-    return {...state,
-      resetGame : false,
-      endingGame: action.payload }
+    return { ...state, endingGame: action.payload }
   
   default:
     return state;
   }
 }
+
 
 function GameContextProvider({children}:any){
 

@@ -8,10 +8,10 @@ interface DisplayProp {
 
 export default function Display({isRound,isCross}:DisplayProp){
     
-  return(
+  return (
     <article style={displayStyle}>
-      <Icon isRound={isRound}  isCross={isCross} width={"70"} height={"70"}/>
-      <Description data={"TURN"}/>
+      <Icon isRound={isRound} isCross={isCross} width={"70"} height={"70"} isDisplayTurn={true} />
+      <Description data={"TURN"} />
     </article>
   )
 }

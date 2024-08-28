@@ -1,10 +1,15 @@
 module.exports = {
-  root:true,
   env: {
     browser: true,
-    es2020: true,
+    es2021: true,
+    jest: true,
   },
-  extends: ["eslint:recommended", "plugin:react/recommended","plugin:import/recommended","plugin:react/jsx-runtime"],
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+  ],
   overrides: [
     {
       env: {
@@ -14,6 +19,8 @@ module.exports = {
       parserOptions: {
         sourceType: "script",
       },
+      files: ".prettierrc",
+      options: { parser: "json" },
     },
   ],
   parser: "@typescript-eslint/parser",
@@ -24,22 +31,21 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ["@typescript-eslint", "react"],
+  plugins: ["react", "react-hooks", "@typescript-eslint", "prettier"],
   rules: {
-    "indent": ["error", 2],
-    "import/extensions" : 0,
-    "quotes": ["warn", "double"],    
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "prettier/prettier": "error",
+    "react/react-in-jsx-scope": "off",
+    camelcase: "error",
+    "spaced-comment": "error",
+    quotes: ["error", "single"],
+    "no-duplicate-imports": "error",
+    "prettier/prettier": ["error"],
   },
   settings: {
     "import/resolver": {
-      node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx",".svg"],
-        moduleDirectory: ["node_modules", "src/"],
-      },
+      typescript: {},
     },
-    react: {
-      "version": "detect"
-    },
-    
-  }
-};
+  },
+}

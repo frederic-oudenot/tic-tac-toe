@@ -1,9 +1,5 @@
-interface Title{
-    data:string
-}
+import { ITitleAttributes } from "../../types/Text"
 
-export default function Title({data}:Title){
-    return(
-        <h1>{data}</h1>
-    )
+export default function Title({ data }: ITitleAttributes) {
+  return <h1>{data}</h1>
 }
